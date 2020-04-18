@@ -1,0 +1,18 @@
+.coupon__num {
+    color: #DF212D;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 28px;
+    margin: 0 0 6px 0;
+}
+@media screen and (max-width:1060px) {
+    .coupon__num {
+        font-size: 28px;
+        line-height: 28px;
+    }
+}
+@media screen and (max-width:715px) {
+    .coupon__num {
+        margin: 0;
+    }
+}

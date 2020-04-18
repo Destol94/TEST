@@ -1,0 +1,14 @@
+.logo__img {
+}
+@media screen and (max-width:1060px) {
+    .logo__img {
+        width: 24px;
+        height: 24px;
+    }
+}
+@media screen and (max-width:715px) {
+    .logo__img {
+        display: none;
+        margin-left: 14px;
+    }
+}

@@ -1,0 +1,26 @@
+@import url(./__top/coupon__top.css);
+@import url(./__title/coupon__title.css);
+@import url(./__description/coupon__description.css);
+@import url(./__num/coupon__num.css);
+@import url(./__label/coupon__label.css);
+@import url(./__bg/coupon__bg.css);
+.coupon {
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, .15);
+    border-radius: 10px;
+    height: 161px;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+@media screen and (max-width:1060px) {
+    .coupon {
+        height: 144px;
+    }
+}
+@media screen and (max-width:715px) {
+    .coupon {
+        height: 130px;
+    }
+}

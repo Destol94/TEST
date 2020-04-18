@@ -1,0 +1,17 @@
+@import url(./__text/logo__text.css);
+@import url(./__img/logo__img.css);
+.logo {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+}
+@media screen and (max-width:1060px) {
+    .logo {
+        font-size: 14px;
+        line-height: 21px;
+        position: sticky;
+        top: 42px;
+    }
+}

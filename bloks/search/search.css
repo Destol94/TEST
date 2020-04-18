@@ -1,0 +1,21 @@
+@import url(./__img/search__img.css);
+@import url(./__field/search__field.css);
+.search {
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    border-radius: 50px;
+    display: flex;
+    font-size: 18px;
+    line-height: 28px;
+    height: 52px;
+}
+@media screen and (max-width:1060px) {
+    .search {
+        margin-left: auto;
+    }
+}
+@media screen and (max-width:715px) {
+    .search {
+        margin-left: auto;
+        font-size: 14px;
+    }
+}

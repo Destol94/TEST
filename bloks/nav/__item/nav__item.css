@@ -1,0 +1,14 @@
+.nav__item {
+    display: flex;
+    color: #333333;
+    height: 65px;
+    background: none;
+    border: none;
+    padding: 0;
+    position: relative;
+}
+@media screen and (max-width:1060px) {
+    .nav__item{
+        height: 60px;
+    }
+}

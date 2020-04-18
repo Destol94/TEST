@@ -1,0 +1,11 @@
+.nav__text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 14px;
+}
+@media screen and (max-width:1060px) {
+    .nav__text {
+        display: none;
+    }
+}

@@ -1,0 +1,13 @@
+@import url(./_vine/coupon__bg_vine.css);
+@import url(./_beer/coupon__bg_beer.css);
+@import url(./_cake/coupon__bg_cake.css);
+@import url(./_sushi/coupon__bg_sushi.css);
+@import url(./_fruit/coupon__bg_fruit.css);
+@import url(./_steak/coupon__bg_steak.css);
+@import url(./_shawarma/coupon__bg_shawarma.css);
+@import url(./_icecream/coupon__bg_icecream.css);
+.coupon__bg {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100% 100%;
+}

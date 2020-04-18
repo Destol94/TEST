@@ -1,0 +1,16 @@
+@import url(./__filling/union__filling.css);
+.union {
+    position: sticky;
+    right: 0; top: 0;
+    transform: translate(99%);
+    background: none;
+    border: none;
+    padding: 0;
+    display: none;
+    visibility: visible;
+}
+@media screen and (max-width:1060px) {
+    .union {
+        display: block;
+    }
+}

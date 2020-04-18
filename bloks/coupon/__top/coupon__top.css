@@ -1,0 +1,14 @@
+.coupon__top {
+    font-size: 16px;
+    line-height: 16px;
+}
+@media screen and (max-width:1060px) {
+    .coupon__top {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:715px) {
+    .coupon__top {
+        font-size: 12px;
+    }
+}

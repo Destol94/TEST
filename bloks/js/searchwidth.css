@@ -1,0 +1,18 @@
+.searchwidth {
+    width: 93%;
+}
+@media screen and (max-width:700px) {
+    .searchwidth {
+        width: 90%;
+    }
+}
+@media screen and (max-width:500px) {
+    .searchwidth {
+        width: 85%;
+    }
+}
+@media screen and (max-width:350px) {
+    .searchwidth {
+        width: 80%;
+    }
+}

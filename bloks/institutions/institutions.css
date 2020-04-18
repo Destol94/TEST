@@ -1,0 +1,26 @@
+.institutions {
+    background-color: #FAFAFA;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
+    grid-gap: 20px;
+    padding: 40px 60px 100px;
+    font-family: 'Roboto';
+    width: 100%;
+    box-sizing: border-box;
+}
+@media screen and (max-width:1060px) {
+    .institutions {
+        padding: 27px 26px 100px 26px;
+    }
+}
+@media screen and (max-width:767px) {
+    .institutions {
+        grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+    }
+}
+@media screen and (max-width:715px) {
+    .institutions {
+        padding: 27px 20px 100px 30px;
+        grid-gap: 15px;
+    }
+}

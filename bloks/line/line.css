@@ -1,0 +1,14 @@
+.line {
+    border: 3px solid black;
+    height: 24px;
+    width: 0;
+    position: absolute;
+    left: -42px;
+    top: 12px;
+    display: none;
+}
+@media screen and (max-width:700px) {
+    .line {
+        left: -6px;
+    }
+}

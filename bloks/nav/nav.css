@@ -1,0 +1,12 @@
+@import url(./__item/nav__item.css);
+@import url(./__img/nav__img.css);
+@import url(./__text/nav__text.css);
+.nav {
+    font-family: 'OpenSans';
+}
+@media screen and (max-width:1060px) {
+    .nav {
+        position: sticky;
+        top: 115px;
+    }
+}

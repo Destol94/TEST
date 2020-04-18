@@ -1,0 +1,22 @@
+.sidebar {
+    background-color: #F3F4F9;
+    padding: 42px;
+    position: relative;
+}
+@media screen and (max-width:1060px) {
+    .sidebar {
+        width: auto;
+        padding: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 4;
+    }
+}
+@media screen and (max-width:715px) {
+    .sidebar {
+        padding: 27px 20px 100px 20px;
+        padding: 6px;
+    }
+}

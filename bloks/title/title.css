@@ -1,0 +1,19 @@
+.title {
+    opacity: .85;
+    margin: 0 0 33px;
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 600;
+}
+@media screen and (max-width:1060px) {
+    .title {
+        text-align: end;
+    }
+}
+@media screen and (max-width:715px) {
+    .title {
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0 0 30px;
+    }
+}
