@@ -1,5 +1,5 @@
 const union = document.querySelector('.union');
-let unionFilling = union.querySelector('.union__filling');
+const unionFilling = union.querySelector('.union__filling');
 const nav = document.querySelector('.nav');
 const navItem = nav.querySelectorAll('.nav__item');
 const navText = nav.querySelectorAll('.nav__text');
@@ -64,7 +64,7 @@ function checkChoice() {
 // Функция отслеживания скрола для назначаниея ширины поисковой строке
 $(window).scroll(function(){
     if (window.screen.width <1061) {
-        if ($(window).scrollTop() > 50) {
+        if ($(window).scrollTop() > 20) {
             $('.search').addClass('searchwidth');
             if (window.screen.width < 351) {   // убирает картинку увеличительного стекла
                 searchImg.classList.add('removeBlock');
@@ -82,9 +82,9 @@ $(window).scroll(function(){
 
 // чтобы закрывалась пометка(line) при закрытии панели union.
 if (window.screen.width < 716) {
-    union.addEventListener('click', checkChoisemob);
+    union.addEventListener('click', checkChoicemob);
 }
-function checkChoisemob() {
+function checkChoicemob() {
     for(let i=0; i<navItem.length; i++) {
         if (navText[i].innerText === title.innerText) {
             navItem[i].classList.toggle('filter');
