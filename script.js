@@ -90,6 +90,11 @@ function scrollsearch(){
              if (window.innerWidth <351) {
                 searchImg.classList.add('removeBlock');
              }
+             addEventListener('resize', function(){  // убирает картинку поиска, если при проскроленной страницу уменьшить ширину
+                 if (window.innerWidth < 351) {
+                    searchImg.classList.add('removeBlock');
+                 }
+             })
             
         }
         else {
@@ -99,7 +104,11 @@ function scrollsearch(){
     }
     
 }
+
+// проверка если уже страница прокручена вниз, чтобы поисковая строка была нужной ширины
 scrollsearch();
+
+
 //если меню не открыто, убирать line
 addEventListener('resize',function(){
      if (!(navText[2].classList.contains('addBlock')) && (window.innerWidth < 716)) { 
@@ -113,7 +122,7 @@ addEventListener('resize',function(){
     else {
         checkChoice();
     }
-    if (window.innerWidth >350) {
+    if (window.innerWidth >350) {  //Проявляет картинку поиска в строке, если увеличивешь ширину при прокрученной странице вниз
         searchImg.classList.remove('removeBlock');
     }
 });
