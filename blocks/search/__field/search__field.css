@@ -5,9 +5,10 @@
     border-radius: 50px;
     outline: none;
     line-height: normal;
+    padding-left: 8px;
 }
 @media screen and (max-width:350px) {
-    .search__field::placeholder {
-        text-align: center;
+    .search__field {
+        padding-left: 16px;
     }
 }

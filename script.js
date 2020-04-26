@@ -10,8 +10,9 @@ let title = document.querySelector('.title');
 const line = document.querySelectorAll('.line');
 const search = document.querySelector('.search');
 const searchImg = search.querySelector('.search__img');
-// Условия чтобы сразу проверить какой пункт меню выбран.
-if (window.screen.width > 715) {
+
+// Условия проверки выбора заголовка. При меньше разрешении проверка не нужна, так как сайд бар скрыт полностью
+if (window.innerWidth > 715) {
     checkChoice();
 } 
 
@@ -22,32 +23,50 @@ function openSidebar() {
         navText[i].classList.toggle('addBlock');
     }
     logoText.classList.toggle('addBlock');
+    logo.classList.toggle('addBlock');
 
-    
-     //Изменение пути к картинке в кнопке сайдбара
+     //Изменение картинки кнопки откр/закр Sidebar
 
     if (unionFilling.outerHTML === '<img class="union__filling" src="./images/burgerMenu.png" alt="">') {
         unionFilling.src = './images/menuExit.png';
     }
     else if (unionFilling.outerHTML === '<img class="union__filling" src="./images/menuExit.png" alt="">') {
         unionFilling.src ='./images/burgerMenu.png';
-
     }
 }
-union.addEventListener('click', openSidebar);
 
+//кнопка открытия/закрытия Sidebar
+union.addEventListener('click', function(){
+    if (window.innerWidth > 715) {
+        openSidebar();
+    }
+    else {
+        checkChoicemob();
+        openSidebar();
+    }
+});
+
+//отрытие/закрытие Sidebar на маленьких рахрешениях
+function checkChoicemob() {
+    for(let i=0; i<navItem.length; i++) {
+        if (navText[i].innerText === title.innerText) {
+            navItem[i].classList.toggle('filter');
+            line[i].classList.toggle('addBlock');
+        }
+    }
+}
+
+//Меняет заголовок по выбору пункта меню
 navItem.forEach(function(item) {
     item.addEventListener('click', changeText);
 })
 
-//Меняет заголовок по выбору пункта меню
-
-function changeText() {  
+function changeText() {
     title.textContent = this.textContent;
     checkChoice();
 }
 
-//Окрашивает выбранный заголовок в сайдбаре и проявляет line
+//Окрашивает выбранный заголовок в Sidebar и проявляет line
 function checkChoice() {
     for(let i=0; i<navItem.length; i++) {
         if (navText[i].innerText === title.innerText) {
@@ -62,36 +81,39 @@ function checkChoice() {
     }
 }
 // Функция отслеживания скрола для назначаниея ширины поисковой строке
-$(window).scroll(function(){
-    if (window.screen.width <1061) {
+$(window).scroll(scrollsearch);
+function scrollsearch(){
+    if (window.innerWidth <1061) {
         if ($(window).scrollTop() > 20) {
             $('.search').addClass('searchwidth');
-            if (window.screen.width < 351) {   // убирает картинку увеличительного стекла
+             // убирает картинку увеличительного стекла
+             if (window.innerWidth <351) {
                 searchImg.classList.add('removeBlock');
-            }            
+             }
+            
         }
         else {
             $('.search').removeClass('searchwidth');
-            if (window.screen.width < 351) {
-                searchImg.classList.remove('removeBlock');
-            }
+            searchImg.classList.remove('removeBlock');
         }
     }
     
-});
-
-// чтобы закрывалась пометка(line) при закрытии панели union.
-if (window.screen.width < 716) {
-    union.addEventListener('click', checkChoicemob);
 }
-function checkChoicemob() {
-    for(let i=0; i<navItem.length; i++) {
-        if (navText[i].innerText === title.innerText) {
-            navItem[i].classList.toggle('filter');
-            line[i].classList.toggle('addBlock');
+scrollsearch();
+//если меню не открыто, убирать line
+addEventListener('resize',function(){
+     if (!(navText[2].classList.contains('addBlock')) && (window.innerWidth < 716)) { 
+        for (let i=0; i < line.length; i++) {
+            if (line[i].classList.contains('addBlock')) {
+                line[i].classList.remove('addBlock');
+                navItem[i].classList.remove('filter');
+            }
         }
     }
-    if (window.screen.width < 716) {
-        logoImg.classList.toggle('addBlock');
+    else {
+        checkChoice();
     }
-}
+    if (window.innerWidth >350) {
+        searchImg.classList.remove('removeBlock');
+    }
+});

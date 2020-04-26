@@ -15,3 +15,8 @@
         top: 42px;
     }
 }
+@media screen and (max-width:715px) {
+    .logo {
+        display: none;
+    }
+}
