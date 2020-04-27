@@ -1,17 +1,18 @@
 .header {
     padding: 40px 60px;
-    z-index: 1;
     border-bottom: 1px solid #E5E5E5;
 }
 @media screen and (max-width:1060px) {
     .header {
         padding: 27px;
-        position: sticky;
+        position: sticky;        
+        z-index: 1;
         top: -70px;
         background-color: white;
     }
 }
-@media screen and (max-width:715px) {
+@media screen and (max-width:715px){
     .header {
         padding: 37px 20px 27px 20px;
+    }
 }
